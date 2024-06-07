@@ -1,61 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
     const heroImages = [
         {
-            src: 'LANDSCAPE/skylineSunset1-05.png',
+            src: 'https://github.com/bellamoss77/portfolio-page/blob/main/LANDSCAPE/skylineSunset1-05.png?raw=true',
             alt: 'sunset',
             caption: 'Landscape'
         }, {
-            src: 'LANDSCAPE/fleurs_10.png',
+            src: 'https://github.com/bellamoss77/portfolio-page/blob/main/LANDSCAPE/fleurs_10.png?raw=true',
             alt: 'Iris',
             caption: 'Nature'
         }, {
-            src: 'ANIMALS/IMG_0639.JPG',
+            src: 'https://github.com/bellamoss77/portfolio-page/blob/main/ANIMALS/IMG_0639.JPG?raw=true',
             alt: 'dog',
             caption: 'Pets'
         }, {
-            src: 'RUINS/abandoned-hotel_60.png',
+            src: 'https://github.com/bellamoss77/portfolio-page/blob/main/RUINS/abandoned-hotel_60.png?raw=true',
             alt: 'graffiti on abandoned hotel',
             caption: 'Ruins'
         }
     ];
 
-    const container = document.getElementById('heroContainer');
-
-    const slider = document.createElement('div');
-    slider.className = 'slider';
-
-
-    const btnContainer = document.createElement('div');
-    btnContainer.className = 'slider__arrows';
-
-    const prevBtn = document.createElement('button');
-    prevBtn.className = 'slider__arrows--left';
-    prevBtn.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
-
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'slider__arrows--right';
-    nextBtn.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
-
     const generateHeroSlides = () => {
-        heroImages.forEach(img => {
-            const sliderItem = document.createElement('div');
-            sliderItem.className = 'slider__item';
-            sliderItem.style.backgroundImage = `url(${img.src})`;
-            sliderItem.style.backgroundSize = 'cover';
-            //sliderItem.style.backgroundRepeat = 'no-repeat';
-            sliderItem.style.backgroundPosition = 'center center';
+        const slider = document.getElementById('slider');
 
-            const slideCaption = document.createElement('p');
-            slideCaption.className = 'slider__text';
+        heroImages.forEach((img, index) => {
+            const slide = document.createElement('div');
+            slide.className = 'slide';
+            if (index === 0) {
+                slide.classList.add('current');
+            }
+            slide.style.backgroundImage = `url(${img.src})`;
+          
+            const slideCaption = document.createElement('h1');
+            slideCaption.className = 'content';
             slideCaption.innerText = `${img.caption}`;
 
-            sliderItem.appendChild(slideCaption);
-            slider.appendChild(sliderItem);
-            slider.appendChild(btnContainer);
-            btnContainer.appendChild(prevBtn);
-            btnContainer.appendChild(nextBtn);
-            container.appendChild(slider);
+            slide.appendChild(slideCaption);
+            slider.appendChild(slide);
         })
+
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'buttons';
+
+        const prevBtn = document.createElement('button');
+        prevBtn.id = 'prev';
+        prevBtn.innerHTML = `<i class="fa-solid fa-chevron-left"></i>`;
+
+        const nextBtn = document.createElement('button');
+        nextBtn.id = 'next';
+        nextBtn.innerHTML = `<i class="fa-solid fa-chevron-right"></i>`;
+
+        btnContainer.appendChild(prevBtn);
+        btnContainer.appendChild(nextBtn);
+        slider.appendChild(btnContainer);
     }
+
     generateHeroSlides();
 })
