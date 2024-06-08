@@ -53,6 +53,7 @@ nav {
         font-family: $sansSerifFont;
         font-size: 2rem;
         color: #fff;
+        margin-right: 3%;
     }
 }
 button {
@@ -179,6 +180,14 @@ body {
     line-height: 1.5;
     color: #26056f;
     background: #fff;
+}
+
+.gallery-title {
+    font-family: $serifFont;
+    font-size: 5rem;
+    text-align: center;
+    width: 100vw;
+    margin-top: 5%;
 }
 
 #container {
