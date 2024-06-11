@@ -1,0 +1,214 @@
+@import url("https://use.typekit.net/efa7ivj.css");
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#menu-trigger {
+  cursor: pointer;
+}
+#menu-trigger:hover {
+  color: rgb(255, 255, 255);
+}
+
+nav {
+  width: 100vw;
+  height: 50px;
+  background-color: #029a7f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .branding {
+  font-family: "coquette", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-right: 3%;
+}
+
+button {
+  background: none;
+  outline: none;
+  border: none;
+  z-index: 1001;
+}
+
+#hamburger_icon {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  height: 30px;
+  margin: 0 auto;
+  position: relative;
+  width: 40px;
+}
+#hamburger_icon .hamburger__line {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 3px;
+  height: 6px;
+  position: absolute;
+  transition-duration: 150ms;
+  transition: cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  -webkit-transition: cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  -moz-transition: cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  -ms-transition: cubic-bezier(0.8, 0.5, 0.2, 1.4);
+  width: 100%;
+}
+#hamburger_icon .hamburger__line:nth-child(1) {
+  left: 0px;
+  top: 0px;
+  transition-duration: 150ms;
+}
+#hamburger_icon .hamburger__line:nth-child(2) {
+  left: 0px;
+  opacity: 1;
+  top: 12px;
+}
+#hamburger_icon .hamburger__line:nth-child(3) {
+  bottom: 0px;
+  left: 0px;
+  transition-duration: 150ms;
+}
+#hamburger_icon.open .hamburger__line:nth-child(1) {
+  top: 21px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transition-duration: 150ms;
+}
+#hamburger_icon.open .hamburger__line:nth-child(2) {
+  opacity: 0;
+}
+#hamburger_icon.open .hamburger__line:nth-child(3) {
+  top: 21px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transition-duration: 150ms;
+}
+
+#menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+  background-color: #FED7E2;
+  box-shadow: 10px 0 5px rgba(112, 36, 89, 0.2);
+  overflow: hidden;
+  transform: scaleX(0);
+  transform-origin: left center;
+  z-index: 1002;
+}
+#menu .menu-content {
+  padding: 2rem;
+  background-color: #FBB6CE;
+  height: 100%;
+  position: relative;
+  z-index: 1003;
+}
+#menu .menu-content .menu-list {
+  list-style-type: none;
+}
+#menu .menu-content .menu-list .menu-item {
+  color: #fff;
+  padding-bottom: 0.5rem;
+  font-size: 32px;
+  font-family: "coquette", sans-serif;
+  font-weight: 500;
+}
+#menu .menu-content .menu-list .menu-item.selected {
+  text-decoration: underline;
+  cursor: none;
+  background-color: none;
+  pointer-events: none;
+}
+#menu .menu-content .menu-list .menu-item:hover {
+  background-color: #4405cd;
+  padding: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "coquette", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #26056f;
+  background: #fff;
+}
+
+.gallery-title {
+  font-family: "sinete", sans-serif;
+  font-size: 5rem;
+  text-align: center;
+  width: 100vw;
+  margin-top: 5%;
+}
+
+#container {
+  max-width: 80rem;
+  width: 100%;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+}
+
+main #container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+main #container .card {
+  color: #000;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+}
+main #container .card-img {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-top: 70%;
+  background: #fff;
+}
+main #container .card-img img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  main #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}/*# sourceMappingURL=ruins.css.map */
