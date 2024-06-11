@@ -3,19 +3,23 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             src: 'https://github.com/bellamoss77/portfolio-page/blob/main/LANDSCAPE/skylineSunset1-05.png?raw=true',
             alt: 'sunset',
-            caption: 'Landscape'
+            caption: 'Landscape',
+            link: 'nature.html'
         }, {
             src: 'https://github.com/bellamoss77/portfolio-page/blob/main/LANDSCAPE/fleurs_10.png?raw=true',
             alt: 'Iris',
-            caption: 'Nature'
+            caption: 'Nature',
+            link: 'nature.html'
         }, {
             src: 'https://github.com/bellamoss77/portfolio-page/blob/main/ANIMALS/IMG_0639.JPG?raw=true',
             alt: 'dog',
-            caption: 'Pets'
+            caption: 'Pets',
+            link: 'animal.html'
         }, {
             src: 'https://github.com/bellamoss77/portfolio-page/blob/main/RUINS/abandoned-hotel_60.png?raw=true',
             alt: 'graffiti on abandoned hotel',
-            caption: 'Ruins'
+            caption: 'Ruins',
+            link: 'ruins.html'
         }
     ];
 
@@ -23,6 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const slider = document.getElementById('slider');
 
         heroImages.forEach((img, index) => {
+            const slideLink = document.createElement('a');
+            slideLink.className = 'slide-link';
+            slideLink.href = `${img.link}`;
+
             const slide = document.createElement('div');
             slide.className = 'slide';
             if (index === 0) {
@@ -35,7 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
             slideCaption.innerText = `${img.caption}`;
 
             slide.appendChild(slideCaption);
-            slider.appendChild(slide);
+            slideLink.appendChild(slide);
+            slider.appendChild(slideLink);
         })
 
         const btnContainer = document.createElement('div');

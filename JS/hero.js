@@ -7,25 +7,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideInterval;
 
     const nextSlide = () => {
-        const current = document.querySelector('.current');
+        const current = document.querySelector('.slide.current');
         current.classList.remove('current');
-        if (current.nextElementSibling) {
-            current.nextElementSibling.classList.add('current');
+        if (current.parentElement.nextElementSibling && current.parentElement.nextElementSibling.querySelector('.slide')) {
+            current.parentElement.nextElementSibling.querySelector('.slide').classList.add('current');
         } else {
             slides[0].classList.add('current');
         }
-        setTimeout(() => current.classList.remove('current'));
     }
 
     const prevSlide = () => {
-        const current = document.querySelector('.current');
+        const current = document.querySelector('.slide.current');
         current.classList.remove('current');
-        if (current.previousElementSibling) {
-            current.previousElementSibling.classList.add('current');
+        if (current.parentElement.previousElementSibling && current.parentElement.previousElementSibling.querySelector('.slide')) {
+            current.parentElement.previousElementSibling.querySelector('.slide').classList.add('current');
         } else {
-            slides[slides.length - 1].classList.add('current')
+            slides[slides.length - 1].classList.add('current');
         }
-        setTimeout(() => current.classList.remove('current'));
     }
 
     nextBtn.addEventListener('click', (e) => {
@@ -34,11 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
     prevBtn.addEventListener('click', (e) => {
         prevSlide();
     });
+
     window.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') {
-            nextSlide();
-        } else if (e.key === 'ArrowRight') {
             prevSlide();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
         }
     })
 
