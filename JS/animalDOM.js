@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
             imgEl.alt = img.alt;
 
             linkEl.appendChild(imgEl);
-            cardImg.appendChild(linkEl);
-            card.appendChild(cardImg);
+            cardImgContainer.appendChild(linkEl);
+            card.appendChild(cardImgContainer);
             galleryContainer.appendChild(card);
         })
     }
