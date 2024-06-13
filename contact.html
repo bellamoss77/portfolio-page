@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Home</title>
-    <link rel="stylesheet" href="Styles/styles1.css">
-    <link rel="stylesheet" href="Styles/hero.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="Styles/contact.css">
     <link rel="stylesheet" href="https://use.typekit.net/efa7ivj.css">
     <script src="https://kit.fontawesome.com/8f1f53b08b.js" crossorigin="anonymous"></script>
 </head>
@@ -23,23 +22,38 @@
     <aside id="menu">
         <div class="menu-content">
             <ul class="menu-list">
-                <li class="menu-item" selected><a href="#">Home</a></li>
+                <li class="menu-item"><a href="index.html">Home</a></li>
                 <li class="menu-item"><a href="about.html">About</a></li>
-                <li class="menu-item"><a href="contact.html">Contact</a></li>
+                <li class="menu-item" selected><a href="#">Contact</a></li>
                 <li class="menu-item"><a href="nature.html">Landscape/Nature</a></li>
                 <li class="menu-item"><a href="animal.html">Animal</a></li>
                 <li class="menu-item"><a href="ruins.html">Ruins</a></li>
             </ul>
         </div>
     </aside>
-
-    <div id="slider"></div>
+    <div class="contact-form-container">
+        <h1>Contact Me</h1>
+        <form action="https://formspree.io/f/mayrrbqw" method="POST" id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message"></label>
+                <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+            </div>
+            <button type="submit">Send <i class="fa-regular fa-paper-plane"></i></button>
+        </form>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="JS/nav.js"></script>
-    <script src="JS/homeDOM.js"></script>
-    <script src="JS/heroDOM.js"></script>
-    <script src="JS/hero.js"></script>
-    <script src="JS/home.js"></script>
+    <script src="JS/contact.js"></script>
 </body>
-</html>
-

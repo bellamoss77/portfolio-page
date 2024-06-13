@@ -139,7 +139,7 @@ button {
 }
 #menu .menu-content .menu-list .menu-item:hover {
   background-color: #4405cd;
-  padding: 1rem;
+  padding: 0.25rem;
 }
 
 #heroContainer {

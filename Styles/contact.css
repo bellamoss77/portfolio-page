@@ -136,79 +136,61 @@ button {
   padding: 0.25rem;
 }
 
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style: none;
-  list-style-type: none;
-  text-decoration: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
 body {
-  font-family: "coquette", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #26056f;
-  background: #fff;
-}
-
-.gallery-title {
-  font-family: "sinete", sans-serif;
-  font-size: 5rem;
-  text-align: center;
+  height: 100%;
   width: 100vw;
-  margin-top: 5%;
-}
-
-#container {
-  max-width: 80rem;
-  width: 100%;
-  padding: 4rem 2rem;
-  margin: 0 auto;
-}
-
-main #container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  font-family: "arboria", sans-serif;
+  background-color: #003314;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-main #container .card {
-  color: #000;
-  border-radius: 5px;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
-}
-main #container .card-img {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding-top: 70%;
-  background: #fff;
-}
-main #container .card-img img {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 
-@media only screen and (max-width: 600px) {
-  main #container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}/*# sourceMappingURL=nature.css.map */
+.contact-form-container {
+  margin-top: 10%;
+  background: #FCFBF4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-form-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact-form-container .form-group {
+  margin-bottom: 15px;
+}
+.contact-form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+.contact-form-container .form-group input,
+.contact-form-container .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9F8C76;
+  border-radius: 5px;
+}
+.contact-form-container button {
+  justify-self: center;
+  width: 50%;
+  padding: 10px;
+  background-color: #003314;
+  border: none;
+  border-radius: 5px;
+  color: #FCFBF4;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contact-form-container button:hover {
+  background-color: #443a2f;
+}/*# sourceMappingURL=contact.css.map */
