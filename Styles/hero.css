@@ -7,7 +7,7 @@
 
 body {
   font-family: "sinete", sans-serif;
-  background: #333;
+  background-color: #FCFBF4;
   color: #fff;
   line-height: 1.6;
 }
@@ -70,10 +70,10 @@ body {
 #slider .buttons #next {
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 5%;
 }
 #slider .buttons #prev {
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 5%;
 }/*# sourceMappingURL=hero.css.map */

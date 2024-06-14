@@ -3,6 +3,10 @@
 $sansSerifFont: 'coquette', sans-serif;
 $serifFont: "sinete", sans-serif;
 $boxShadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+$forestGreen: #003314;
+$cream: #FCFBF4;
+$beige: #9F8C76;
+$lightBeige: #d7bb9b;
 
 @mixin flex($direction, $justify, $align) {
     display: flex;
@@ -40,9 +44,10 @@ a {
 }
 
 nav {
+    padding: 0 1rem;
     width: 100vw;
     height: 50px;
-    background-color: #029a7f;
+    background-color: $forestGreen;
     position: fixed;
     top: 0;
     left: 0;
@@ -52,7 +57,7 @@ nav {
     .branding {
         font-family: $sansSerifFont;
         font-size: 2rem;
-        color: #fff;
+        color: $cream;
         margin-right: 3%;
     }
 }
@@ -121,7 +126,7 @@ button {
     left: 0;
     width: fit-content;
     height: 100%;
-    background-color: #FED7E2;
+    background-color: $lightBeige;
     box-shadow: 10px 0 5px rgba(112, 36, 89, 0.2);
     overflow: hidden;
     transform: scaleX(0);
@@ -129,14 +134,14 @@ button {
     z-index: 1002;
     .menu-content {
         padding: 2rem;
-        background-color: #FBB6CE;
+        background-color: $beige;
         height: 100%;
         position: relative;
         z-index: 1003;
         .menu-list {
             list-style-type: none;
             .menu-item {
-                color: #fff;
+                color: $cream;
                 padding-bottom: 0.5rem;
                 font-size: 32px;
                 font-family: $sansSerifFont;
@@ -149,7 +154,7 @@ button {
                     pointer-events: none;
                 }
                 &:hover {
-                    background-color: #4405cd;
+                    background-color: $forestGreen;
                     padding: 0.25rem;
                 }
             }
@@ -178,14 +183,15 @@ body {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
-    color: #26056f;
-    background: #fff;
+    color: $forestGreen;
+    background-color: #FCFBF4;
 }
 
 .gallery-title {
     font-family: $serifFont;
-    font-size: 5rem;
-    text-align: center;
+    font-size: 2.5rem;
+    text-align: start;
+    margin-left: 5%;
     width: 100vw;
     margin-top: 5%;
 }

@@ -4,6 +4,10 @@ $primaryFont: "arboria", sans-serif;
 $sansSerifFont: 'coquette', sans-serif;
 $serifFont: "sinete", sans-serif;
 $boxShadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
+$forestGreen: #003314;
+$cream: #FCFBF4;
+$beige: #9F8C76;
+$lightBeige: #d7bb9b;
 
 @mixin flex($direction, $justify, $align) {
     display: flex;
@@ -41,9 +45,10 @@ a {
 }
 
 nav {
+    padding: 0 1rem;
     width: 100vw;
     height: 50px;
-    background-color: #029a7f;
+    background-color: $forestGreen;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,7 +58,7 @@ nav {
     .branding {
         font-family: $sansSerifFont;
         font-size: 2rem;
-        color: #fff;
+        color: $cream;
         margin-right: 3%;
     }
 }
@@ -122,7 +127,7 @@ button {
     left: 0;
     width: fit-content;
     height: 100%;
-    background-color: #FED7E2;
+    background-color: $lightBeige;
     box-shadow: 10px 0 5px rgba(112, 36, 89, 0.2);
     overflow: hidden;
     transform: scaleX(0);
@@ -130,14 +135,14 @@ button {
     z-index: 1002;
     .menu-content {
         padding: 2rem;
-        background-color: #FBB6CE;
+        background-color: $beige;
         height: 100%;
         position: relative;
         z-index: 1003;
         .menu-list {
             list-style-type: none;
             .menu-item {
-                color: #fff;
+                color: $cream;
                 padding-bottom: 0.5rem;
                 font-size: 32px;
                 font-family: $sansSerifFont;
@@ -150,7 +155,7 @@ button {
                     pointer-events: none;
                 }
                 &:hover {
-                    background-color: #4405cd;
+                    background-color: $forestGreen;
                     padding: 0.25rem;
                 }
             }
@@ -162,17 +167,18 @@ body {
     height: 100%;
     width: 100vw;
     font-family: $primaryFont;
-    background-color: #003314;
+    background-color: #FCFBF4;
     margin: 0;
     @include flex(row, center, center);
 }
 
 .contact-form-container {
     margin-top: 10%;
-    background: #FCFBF4;
+    background: $lightBeige;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: $forestGreen;
     width: 100%;
     max-width: 500px;
     @include flex(column, center, center);

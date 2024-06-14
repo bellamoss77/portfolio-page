@@ -12,9 +12,10 @@ a {
 }
 
 nav {
+  padding: 0 1rem;
   width: 100vw;
   height: 50px;
-  background-color: #029a7f;
+  background-color: #003314;
   position: fixed;
   top: 0;
   left: 0;
@@ -27,7 +28,7 @@ nav {
 nav .branding {
   font-family: "coquette", sans-serif;
   font-size: 2rem;
-  color: #fff;
+  color: #FCFBF4;
   margin-right: 3%;
 }
 
@@ -101,7 +102,7 @@ button {
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
-  background-color: #FED7E2;
+  background-color: #d7bb9b;
   box-shadow: 10px 0 5px rgba(112, 36, 89, 0.2);
   overflow: hidden;
   transform: scaleX(0);
@@ -110,7 +111,7 @@ button {
 }
 #menu .menu-content {
   padding: 2rem;
-  background-color: #FBB6CE;
+  background-color: #9F8C76;
   height: 100%;
   position: relative;
   z-index: 1003;
@@ -119,7 +120,7 @@ button {
   list-style-type: none;
 }
 #menu .menu-content .menu-list .menu-item {
-  color: #fff;
+  color: #FCFBF4;
   padding-bottom: 0.5rem;
   font-size: 32px;
   font-family: "coquette", sans-serif;
@@ -132,7 +133,7 @@ button {
   pointer-events: none;
 }
 #menu .menu-content .menu-list .menu-item:hover {
-  background-color: #4405cd;
+  background-color: #003314;
   padding: 0.25rem;
 }
 
@@ -140,7 +141,7 @@ body {
   height: 100%;
   width: 100vw;
   font-family: "arboria", sans-serif;
-  background-color: #003314;
+  background-color: #FCFBF4;
   margin: 0;
   display: flex;
   flex-direction: row;
@@ -150,10 +151,11 @@ body {
 
 .contact-form-container {
   margin-top: 10%;
-  background: #FCFBF4;
+  background: #d7bb9b;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #003314;
   width: 100%;
   max-width: 500px;
   display: flex;

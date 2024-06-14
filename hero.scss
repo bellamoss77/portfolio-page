@@ -2,6 +2,10 @@
 
 $sansSerifFont: 'coquette', sans-serif;
 $serifFont: "sinete", sans-serif;
+$forestGreen: #003314;
+$cream: #FCFBF4;
+$beige: #9F8C76;
+$lightBeige: #d7bb9b;
 
 @mixin flex($direction, $justify, $align) {
     display: flex;
@@ -18,7 +22,7 @@ $serifFont: "sinete", sans-serif;
 
 body {
     font-family: $serifFont;
-    background: #333;
+    background-color: $cream;
     color: #fff;
     line-height: 1.6;
 }
@@ -87,12 +91,12 @@ body {
         #next {
             position: absolute;
             top: 50%;
-            right: 15px;
+            right: 5%;
         }
         #prev {
             position: absolute;
             top: 50%;
-            left: 15px;
+            left: 5%;
         }
     }
 }
