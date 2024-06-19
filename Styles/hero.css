@@ -8,7 +8,7 @@
 body {
   font-family: "sinete", sans-serif;
   background-color: #FCFBF4;
-  color: #fff;
+  color: #003314;
   line-height: 1.6;
 }
 
@@ -48,7 +48,8 @@ body {
   width: 600px;
   opacity: 0;
   background: rgba(255, 255, 255, 0.6);
-  color: #333;
+  color: #003314;
+  font-weight: 800;
   padding: 35px;
 }
 #slider .slide .content h1 {
